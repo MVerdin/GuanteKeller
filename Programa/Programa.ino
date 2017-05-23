@@ -12,11 +12,13 @@ const int pinDedoMenique2=7;
 const int pinDedoPulgar1=8;
 const int pinDedoPulgar2=9;
 
+//Datos de configuracion
+int tolerancia=10;
+
 //Direcciones datos
 const int a=1;
 const int b=2;
 const int c=3;
-const int ch=4;
 const int d=5;
 const int e=6;
 const int f=7;
@@ -28,7 +30,6 @@ const int k=12;
 const int l=13;
 const int m=14;
 const int n=15;
-const int enie=16;
 const int o=17;
 const int p=18;
 const int q=19;
@@ -70,7 +71,6 @@ byte ObjDedoPulgar2;
 const boolean calibracion=true;
 
 
-
 void setup() {
   if (calibracion){
     
@@ -82,6 +82,11 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if(calibracion){
+    
+  }
+  else{
+    
+  }
 
 }

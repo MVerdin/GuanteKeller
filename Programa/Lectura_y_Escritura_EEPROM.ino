@@ -1,4 +1,4 @@
-GuardarDatos(int numLetra){
+void GuardarDatos(int numLetra){
   int dir;
   dir=inicioMemoria+(numLetra*10);
 
@@ -26,7 +26,7 @@ GuardarDatos(int numLetra){
   //TODO
 }
 
-LeerDatos(int numLetra){
+void LeerDatos(int numLetra){
   int dir;
   dir=inicioMemoria+(numLetra*10);
 
