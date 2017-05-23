@@ -55,6 +55,17 @@ byte DedoMenique2;
 byte DedoPulgar1;
 byte DedoPulgar2;
 
+byte ObjDedoIndice1;
+byte ObjDedoIndice2;
+byte ObjDedoMedio1;
+byte ObjDedoMedio2;
+byte ObjDedoAnular1;
+byte ObjDedoAnular2;
+byte ObjDedoMenique1;
+byte ObjDedoMenique2;
+byte ObjDedoPulgar1;
+byte ObjDedoPulgar2;
+
 //Modo de calibracion
 const boolean calibracion=true;
 
