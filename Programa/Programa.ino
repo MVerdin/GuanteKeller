@@ -13,7 +13,7 @@ const int pinDedoPulgar1 = 8;
 const int pinDedoPulgar2 = 9;
 
 //Datos de configuracion
-int tolerancia = 10;
+int tolerancia = 20;
 
 //Direcciones datos
 const int a = 1;
@@ -78,7 +78,7 @@ const boolean calibracion = true;
 void setup() {
   Serial.begin(9600);
   pinMode(13, OUTPUT);
-  if (calibracion) {
+  if (calibracion == true) {
 
   }
   else {
@@ -91,23 +91,32 @@ void loop() {
     mensaje = Serial.readStringUntil('\n');
     letra = IdentificarLetra(mensaje);
     if (letra != -1) {
-      if (calibracion) {
+      if (calibracion == true) {
         LeerPotenciometros();
-        if (GuardarDatos(letra)) {
+        if (GuardarDatos(letra) == true) {
           digitalWrite(13, HIGH);
           delay(1000);
           digitalWrite(13, LOW);
         }
-
       }
+
+
       else {
         LeerDatos(letra);
         do {
           LeerPotenciometros();
-        } while (CompararDatos());
+        } while (CompararDatos() == false);
 
 
         Serial.print("Posicion correcta");
+        digitalWrite(13, HIGH);
+        delay(500);
+        digitalWrite(13, LOW);
+        delay(500);
+        digitalWrite(13, HIGH);
+        delay(500);
+        digitalWrite(13, LOW);
+        delay(500);
       }
     }
   }
