@@ -1,4 +1,4 @@
-void GuardarDatos(int numLetra){
+boolean GuardarDatos(int numLetra){
   int dir;
   dir=inicioMemoria+(numLetra*10);
 
@@ -24,6 +24,7 @@ void GuardarDatos(int numLetra){
   EEPROM.update(dir+8,DedoPulgar1);
   EEPROM.update(dir+9,DedoPulgar2);
   //TODO
+  return true;
 }
 
 void LeerDatos(int numLetra){
