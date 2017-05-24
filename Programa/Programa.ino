@@ -43,7 +43,7 @@ const int w = 25;
 const int x = 26;
 const int y = 27;
 const int z = 28;
-const int inicioMemoria = 512;
+const int inicioMemoria = 255;
 
 //Declaracion de variables
 byte DedoIndice1;
@@ -69,6 +69,7 @@ byte ObjDedoPulgar1;
 byte ObjDedoPulgar2;
 
 String mensaje;
+int letra;
 
 //Modo de calibracion
 const boolean calibracion = true;
@@ -76,8 +77,9 @@ const boolean calibracion = true;
 
 void setup() {
   Serial.begin(9600);
+  pinMode(13, OUTPUT);
   if (calibracion) {
-    
+
   }
   else {
 
@@ -86,13 +88,27 @@ void setup() {
 
 void loop() {
   if (Serial.available() > 0) {
-    mensaje=Serial.readStringUntil('\n');
-    if (calibracion) {
-      
-    }
-    else {
+    mensaje = Serial.readStringUntil('\n');
+    letra = IdentificarLetra(mensaje);
+    if (letra != -1) {
+      if (calibracion) {
+        LeerPotenciometros();
+        if (GuardarDatos(letra)) {
+          digitalWrite(13, HIGH);
+          delay(1000);
+          digitalWrite(13, LOW);
+        }
 
+      }
+      else {
+        LeerDatos(letra);
+        do {
+          LeerPotenciometros();
+        } while (CompararDatos());
+
+
+        Serial.print("Posicion correcta");
+      }
     }
   }
-
 }
