@@ -89,14 +89,27 @@ void setup() {
 void loop() {
   if (Serial.available() > 0) {
     mensaje = Serial.readStringUntil('\n');
+
+    Serial.print("Mensaje recibido: ");
+    Serial.println(mensaje);
+    
     letra = IdentificarLetra(mensaje);
+
+    Serial.print("Letra identificada: ");
+    Serial.println(letra);
+    
     if (letra != -1) {
       if (calibracion == true) {
         LeerPotenciometros();
         if (GuardarDatos(letra) == true) {
-          digitalWrite(13, HIGH);
-          delay(1000);
-          digitalWrite(13, LOW);
+        digitalWrite(13, HIGH);
+        delay(500);
+        digitalWrite(13, LOW);
+        delay(500);
+        digitalWrite(13, HIGH);
+        delay(500);
+        digitalWrite(13, LOW);
+        delay(500);
         }
       }
 
