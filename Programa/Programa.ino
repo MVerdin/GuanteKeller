@@ -72,7 +72,7 @@ String mensaje;
 int letra;
 
 //Modo de calibracion
-const boolean calibracion = true;
+const boolean calibracion = false;
 
 
 void setup() {
@@ -90,26 +90,33 @@ void loop() {
   if (Serial.available() > 0) {
     mensaje = Serial.readStringUntil('\n');
 
-    Serial.print("Mensaje recibido: ");
-    Serial.println(mensaje);
+//    Serial.print("Mensaje recibido: ");
+//    Serial.println(mensaje);
     
     letra = IdentificarLetra(mensaje);
 
-    Serial.print("Letra identificada: ");
-    Serial.println(letra);
+//    Serial.print("Letra identificada: ");
+//    Serial.println(letra);
     
     if (letra != -1) {
       if (calibracion == true) {
         LeerPotenciometros();
         if (GuardarDatos(letra) == true) {
+        Serial.print("Letra \"");
+        Serial.print(mensaje);
+        Serial.println("\" guardada");
         digitalWrite(13, HIGH);
-        delay(500);
+        delay(300);
         digitalWrite(13, LOW);
-        delay(500);
+        delay(300);
         digitalWrite(13, HIGH);
-        delay(500);
+        delay(300);
         digitalWrite(13, LOW);
-        delay(500);
+        delay(300);
+        digitalWrite(13, HIGH);
+        delay(300);
+        digitalWrite(13, LOW);
+        delay(300);
         }
       }
 
@@ -121,7 +128,7 @@ void loop() {
         } while (CompararDatos() == false);
 
 
-        Serial.print("Posicion correcta");
+        Serial.println("Correcto!!");
         digitalWrite(13, HIGH);
         delay(500);
         digitalWrite(13, LOW);
