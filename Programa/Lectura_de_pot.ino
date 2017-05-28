@@ -16,16 +16,16 @@ void LeerPotenciometros() {
   DedoMenique2 = 0;//LeerEntradaAnalogica(pinDedoMenique2);
   DedoPulgar1 = LeerEntradaAnalogica(pinDedoPulgar1);
   DedoPulgar2 = 0;//LeerEntradaAnalogica(pinDedoPulgar2);
-  Serial.println("Posicion actual");
-  Serial.println(DedoIndice1);
-  Serial.println(DedoIndice2);
-  Serial.println(DedoMedio1);
-  Serial.println(DedoMedio2);
-  Serial.println(DedoAnular1);
-  Serial.println(DedoAnular2);
-  Serial.println(DedoMenique1);
-  Serial.println(DedoPulgar1);
-  Serial.println(DedoPulgar2);
+//  Serial.println("Posicion actual");
+//  Serial.println(DedoIndice1);
+//  Serial.println(DedoIndice2);
+//  Serial.println(DedoMedio1);
+//  Serial.println(DedoMedio2);
+//  Serial.println(DedoAnular1);
+//  Serial.println(DedoAnular2);
+//  Serial.println(DedoMenique1);
+//  Serial.println(DedoPulgar1);
+//  Serial.println(DedoPulgar2);
 }
 
 boolean CompararDatos() {

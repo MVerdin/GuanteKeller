@@ -41,17 +41,17 @@ void LeerDatos(int numLetra){
   ObjDedoMenique2=EEPROM.read(dir+7);
   ObjDedoPulgar1=EEPROM.read(dir+8);
   ObjDedoPulgar2=EEPROM.read(dir+9); 
-
-  Serial.println("Posicion deseada");
-  Serial.println(ObjDedoIndice1);
-  Serial.println(ObjDedoIndice2);
-  Serial.println(ObjDedoMedio1);
-  Serial.println(ObjDedoMedio2);
-  Serial.println(ObjDedoAnular1);
-  Serial.println(ObjDedoAnular2);
-  Serial.println(ObjDedoMenique1);
-  Serial.println(ObjDedoPulgar1);
-  Serial.println(ObjDedoPulgar2);
+//
+//  Serial.println("Posicion deseada");
+//  Serial.println(ObjDedoIndice1);
+//  Serial.println(ObjDedoIndice2);
+//  Serial.println(ObjDedoMedio1);
+//  Serial.println(ObjDedoMedio2);
+//  Serial.println(ObjDedoAnular1);
+//  Serial.println(ObjDedoAnular2);
+//  Serial.println(ObjDedoMenique1);
+//  Serial.println(ObjDedoPulgar1);
+//  Serial.println(ObjDedoPulgar2);
    
 }
 
