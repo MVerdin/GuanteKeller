@@ -7,13 +7,13 @@ const int pinDedoMedio1 = 2;
 const int pinDedoMedio2 = 3;
 const int pinDedoAnular1 = 4;
 const int pinDedoAnular2 = 5;
-const int pinDedoMenique1 = 6;
-const int pinDedoMenique2 = 7;
+//const int pinDedoMenique1 = 6;
+//const int pinDedoMenique2 = 7;
 const int pinDedoPulgar1 = 8;
-const int pinDedoPulgar2 = 9;
+//const int pinDedoPulgar2 = 9;
 
 //Datos de configuracion
-int tolerancia = 20;
+int tolerancia = 50;
 
 //Direcciones datos
 const int a = 1;
@@ -123,9 +123,8 @@ void loop() {
 
       else {
         LeerDatos(letra);
-        do {
-          LeerPotenciometros();
-        } while (CompararDatos() == false);
+        
+        while (CompararDatos() == false){}
 
 
         Serial.println("Correcto!!");
