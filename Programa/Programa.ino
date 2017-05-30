@@ -13,7 +13,7 @@ const int pinDedoPulgar1 = 8;
 //const int pinDedoPulgar2 = 9;
 
 //Datos de configuracion
-int tolerancia = 50;
+int tolerancia = 55;
 
 //Direcciones datos
 const int a = 1;
@@ -128,14 +128,14 @@ void loop() {
 
 
         Serial.println("Correcto!!");
-        digitalWrite(13, HIGH);
-        delay(500);
-        digitalWrite(13, LOW);
-        delay(500);
-        digitalWrite(13, HIGH);
-        delay(500);
-        digitalWrite(13, LOW);
-        delay(500);
+//        digitalWrite(13, HIGH);
+//        delay(500);
+//        digitalWrite(13, LOW);
+//        delay(500);
+//        digitalWrite(13, HIGH);
+//        delay(500);
+//        digitalWrite(13, LOW);
+//        delay(500);
       }
     }
   }
