@@ -1,3 +1,5 @@
+//Mario Verdin ITD
+
 #include <EEPROM.h>
 
 //Pines analogicos de conexion de potenciometros
@@ -92,12 +94,12 @@ void loop() {
 
 //    Serial.print("Mensaje recibido: ");
 //    Serial.println(mensaje);
-    
+
     letra = IdentificarLetra(mensaje);
 
 //    Serial.print("Letra identificada: ");
 //    Serial.println(letra);
-    
+
     if (letra != -1) {
       if (calibracion == true) {
         LeerPotenciometros();
@@ -123,7 +125,7 @@ void loop() {
 
       else {
         LeerDatos(letra);
-        
+
         while (CompararDatos() == false){}
 
 
